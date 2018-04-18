@@ -5,7 +5,7 @@
  * Below are functions, filters and hooks that I include into most Wordpress websites that I develop to reduce bloat and
  * improve security. To make this work simply include this file into functions.php
  *
- * @link https://codex.wordpress.org
+ * @link https://github.com/robert-kampas/generic-wordpress-cleanup
  * @version 1.0
  */
 

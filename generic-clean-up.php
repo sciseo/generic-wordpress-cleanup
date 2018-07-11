@@ -14,13 +14,19 @@
  *
  * This function assumes that files passed to it are kept in themes/your-theme/assets/optimised/
  *
- * @param string $file full file name
+ * @param string $file Full file name.
  *
  * @return string
  */
-function theme_asset_version($file = null)
+function theme_asset_version($file)
 {
-    return hash_file('md5', get_template_directory() . '/assets/optimised/' . $file);
+    $file = get_template_directory() . '/assets/optimised/' . $file;
+
+    if (true === file_exists($file)) {
+        return hash_file('md5', $file);
+    } else {
+        return;
+    }
 }
 
 /**
